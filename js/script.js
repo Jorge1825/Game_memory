@@ -31,11 +31,14 @@ let boton = document.getElementById("btn-2");
 
 //Funciones secundarias
 
+//Funcion reiniciar partida
 function Reiniciar() {
   location.reload();  //location.reload sirve para recargar la pagina
 }
 
 
+
+//Funcion encargada de llevar el seguimiento del temporizador
 function contarTiempo() {
   tiemporegresivo = setInterval(() => {
     time.play();
@@ -43,14 +46,16 @@ function contarTiempo() {
     mostrarTiempo.innerHTML = "Tiempo: " + tiempo + " segundos";
     if (tiempo == 0) {
       clearInterval(tiemporegresivo);
-      bloquear_targetas();
+      bloquearTargetas();
       pierdepartida.play();
 
     }
   }, 1000);
 }
 
-function bloquear_targetas() {
+
+//funcion para bloquear targetas 
+function bloquearTargetas() {
   for (let i = 0; i <= 15; i++) {
     let target = document.getElementById(i);
     target.innerHTML = `<img class="target" src="./img/${numeros[i]}.png" alt="${numeros[i]}">`;;
@@ -63,12 +68,10 @@ function bloquear_targetas() {
   //Activar el boton reiniciar 
   boton.classList.add("reiniciar")
 
-
-
 }
 
-//Funcion principal
 
+//Funcion principal 
 function Abrir(id) {
 
   

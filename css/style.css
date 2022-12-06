@@ -85,7 +85,7 @@ h1{
 }
 .estadisticas{
     border: 1px solid white;
-    height: 120px;
+    height: 130px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -95,6 +95,8 @@ h1{
     margin: 10px;
     box-sizing: border-box;
     text-align: center;
+    width: 100%;
+
 
 }
 footer{
